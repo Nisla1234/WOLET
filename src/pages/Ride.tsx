@@ -1,5 +1,4 @@
 import { useState, useMemo } from 'react';
-import { APIProvider } from '@vis.gl/react-google-maps';
 import { ArrowRight, Shield, CheckCircle, ChevronDown, ChevronUp, AlertCircle, MapPin } from 'lucide-react';
 import LocationAutocompleteInput from '../components/LocationAutocompleteInput';
 import RideMapPreview from '../components/RideMapPreview';
@@ -8,8 +7,6 @@ import colomboLotusHeroImg from '../assets/images/colombo-lotus-hero.png';
 import passengerRidesImg from '../assets/images/passenger-rides.png';
 import tuktukRidesImg from '../assets/images/tuktuk-rides.png';
 import bikeRidesImg from '../assets/images/bike-rides.png';
-
-const GOOGLE_MAPS_API_KEY = (import.meta.env.VITE_GOOGLE_MAPS_API_KEY as string | undefined)?.trim() || '';
 
 function areLocationsSame(a: SelectedLocation | null, b: SelectedLocation | null): boolean {
   if (!a || !b) return false;
@@ -33,8 +30,6 @@ export default function Ride() {
   const [submitted, setSubmitted] = useState(false);
   const [attemptedSubmit, setAttemptedSubmit] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-
-  const mapsConfigured = Boolean(GOOGLE_MAPS_API_KEY);
 
   const categories = [
     {
@@ -153,19 +148,6 @@ export default function Ride() {
             </p>
           </div>
 
-          {!mapsConfigured && (
-            <div className="mb-5 bg-amber-50 border border-amber-200 text-amber-900 p-4 rounded-2xl text-xs space-y-1.5">
-              <div className="flex items-center space-x-2 font-bold">
-                <AlertCircle className="w-4 h-4 text-amber-700 shrink-0" />
-                <span>Google Maps Configuration Required</span>
-              </div>
-              <p className="leading-relaxed">
-                Location autocomplete, current-location geocoding, and interactive route map preview require{' '}
-                <code className="bg-amber-100 px-1 py-0.5 rounded font-mono">VITE_GOOGLE_MAPS_API_KEY</code> to be set in the environment.
-              </p>
-            </div>
-          )}
-
           {submitted && pickupLocation && destinationLocation ? (
             <div className="bg-emerald-50 border border-emerald-200 p-5 sm:p-6 rounded-2xl space-y-4">
               <div className="text-center space-y-2">
@@ -215,7 +197,6 @@ export default function Ride() {
                 onLocationSelect={(loc) => setPickupLocation(loc)}
                 validationError={attemptedSubmit ? validation.pickupError : null}
                 allowCurrentLocation={true}
-                mapsConfigured={mapsConfigured}
               />
 
               <LocationAutocompleteInput
@@ -234,7 +215,6 @@ export default function Ride() {
                   validation.identicalError || (attemptedSubmit ? validation.destinationError : null)
                 }
                 allowCurrentLocation={false}
-                mapsConfigured={mapsConfigured}
               />
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -327,19 +307,7 @@ export default function Ride() {
         {/* Right: Interactive Map Preview + Safety Commitment */}
         <div className="lg:col-span-7 space-y-4 sm:space-y-6">
           <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200 p-3.5 sm:p-6 shadow-lg">
-            {mapsConfigured ? (
-              <RideMapPreview pickup={pickupLocation} destination={destinationLocation} />
-            ) : (
-              <div className="h-[220px] sm:h-[360px] lg:h-[440px] rounded-2xl bg-slate-50 border border-dashed border-slate-300 flex flex-col items-center justify-center p-5 sm:p-6 text-center space-y-2.5 sm:space-y-3">
-                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#0759A6]/10 text-[#0759A6] flex items-center justify-center">
-                  <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
-                </div>
-                <h3 className="font-bold text-base sm:text-lg text-[#14243A]">Interactive Route Map Preview</h3>
-                <p className="text-xs sm:text-sm text-[#667085] max-w-md leading-relaxed">
-                  Configure <code className="bg-slate-200 px-1.5 py-0.5 rounded font-mono text-xs">VITE_GOOGLE_MAPS_API_KEY</code> to enable Sri Lanka Places Autocomplete, current location reverse geocoding, and interactive route rendering.
-                </p>
-              </div>
-            )}
+            <RideMapPreview pickup={pickupLocation} destination={destinationLocation} />
           </div>
 
           {/* Safety & Quality Commitment */}
@@ -437,17 +405,7 @@ export default function Ride() {
 
       {/* Interactive Ride Enquiry & Map Section */}
       <section className="py-6 sm:py-12 lg:py-16 max-w-7xl mx-auto mobile-px sm:px-6 lg:px-8">
-        {mapsConfigured ? (
-          <APIProvider
-            apiKey={GOOGLE_MAPS_API_KEY}
-            language="en"
-            region="LK"
-          >
-            {ridePlannerContent}
-          </APIProvider>
-        ) : (
-          ridePlannerContent
-        )}
+        {ridePlannerContent}
       </section>
 
       {/* Passenger FAQs Accordion Section */}
