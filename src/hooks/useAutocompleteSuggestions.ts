@@ -31,6 +31,9 @@ interface PhotonResponse {
   features?: PhotonFeature[];
 }
 
+// Keep requests to the shared public Photon demo service modest.
+let lastPhotonRequestAt = 0;
+
 function formatAddress(properties: NonNullable<PhotonFeature['properties']>): string {
   const parts = [
     properties.name,
@@ -60,7 +63,9 @@ export function useAutocompleteSuggestions(inputString: string, enabled: boolean
     }
 
     const controller = new AbortController();
+    const waitForPublicService = Math.max(650, 1000 - (Date.now() - lastPhotonRequestAt));
     const timer = window.setTimeout(async () => {
+      lastPhotonRequestAt = Date.now();
       setIsLoading(true);
       setError(null);
       try {
@@ -106,7 +111,7 @@ export function useAutocompleteSuggestions(inputString: string, enabled: boolean
       } finally {
         if (!controller.signal.aborted) setIsLoading(false);
       }
-    }, 350);
+    }, waitForPublicService);
 
     return () => {
       window.clearTimeout(timer);
