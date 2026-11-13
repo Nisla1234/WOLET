@@ -84,7 +84,7 @@ export default function RideMapPreview({ pickup, destination }: RideMapPreviewPr
     loadLeaflet().then((L) => {
       if (cancelled || !containerRef.current) return;
       const map = L.map(containerRef.current, { scrollWheelZoom: false }).setView(COLOMBO_CENTER, 11);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         maxZoom: 19,
       }).addTo(map);
