@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -23,34 +22,10 @@ import Refund from './pages/Refund';
 import Cancellation from './pages/Cancellation';
 
 export default function App() {
-  const [mapsQuotaExceeded, setMapsQuotaExceeded] = useState(false);
-
-  useEffect(() => {
-    const handleQuota = () => setMapsQuotaExceeded(true);
-    window.addEventListener('gmp-quota-exceeded', handleQuota);
-    return () => window.removeEventListener('gmp-quota-exceeded', handleQuota);
-  }, []);
-
   return (
     <Router>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-white text-[#14243A] font-sans antialiased selection:bg-[#FFD21F] selection:text-[#08264A] overflow-x-clip">
-        {mapsQuotaExceeded && (
-          <div className="bg-amber-50 border-b border-amber-200 text-amber-900 px-4 py-2.5 text-xs md:text-sm text-center sticky top-0 z-[60] shadow-sm">
-            <span>
-              Google Maps Platform quota reached. If you are the app owner, visit{' '}
-              <a
-                href="https://developers.google.com/maps/ai/ai-studio?utm_campaign=gmp_mcp_codeassist_v1_aistudio#quota_exceeded_errors"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline font-semibold text-amber-950 hover:text-amber-800"
-              >
-                maps developer site
-              </a>{' '}
-              for instructions to update your account.
-            </span>
-          </div>
-        )}
         <Navbar />
         <main className="flex-grow">
           <Routes>
