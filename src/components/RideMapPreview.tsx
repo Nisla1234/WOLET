@@ -101,7 +101,6 @@ export default function RideMapPreview({ pickup, destination }: RideMapPreviewPr
       layersRef.current = [];
       mapRef.current?.remove();
       mapRef.current = null;
-      setMapReady(false);
     };
   }, []);
 
