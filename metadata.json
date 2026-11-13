@@ -1,0 +1,6 @@
+{
+  "name": "WOLET - Your Smart Transit Partner",
+  "description": "Sri Lanka's upcoming smart transit and ride-hailing experience connecting passengers with independent driver-partners.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
