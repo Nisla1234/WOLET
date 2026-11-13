@@ -1,106 +1,123 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
-import { useMapsLibrary } from '@vis.gl/react-google-maps';
+import { useEffect, useState } from 'react';
 
-export interface UseAutocompleteSuggestionsReturn {
-  suggestions: google.maps.places.AutocompleteSuggestion[];
-  isLoading: boolean;
-  error: string | null;
-  resetSession: () => void;
+export interface PlaceSuggestion {
+  id: string;
+  mainText: string;
+  secondaryText: string;
+  formattedAddress: string;
+  latitude: number;
+  longitude: number;
 }
 
-function isQuotaError(err: unknown): boolean {
-  const msg = err instanceof Error ? err.message : String(err);
-  return (
-    msg.includes('OVER_QUERY_LIMIT') ||
-    msg.includes('RESOURCE_EXHAUSTED') ||
-    msg.includes('QuotaExceededError') ||
-    msg.includes('429')
-  );
+interface PhotonFeature {
+  properties?: {
+    osm_id?: number;
+    osm_type?: string;
+    name?: string;
+    street?: string;
+    housenumber?: string;
+    district?: string;
+    city?: string;
+    county?: string;
+    state?: string;
+    postcode?: string;
+    country?: string;
+    countrycode?: string;
+  };
+  geometry?: { coordinates?: [number, number] };
 }
 
-/**
- * Reusable hook for Sri Lanka place autocomplete using Places API (New)
- * AutocompleteSuggestion.fetchAutocompleteSuggestions with session tokens.
- */
-export function useAutocompleteSuggestions(
-  inputString: string,
-  enabled: boolean
-): UseAutocompleteSuggestionsReturn {
-  const placesLib = useMapsLibrary('places');
-  const sessionTokenRef = useRef<google.maps.places.AutocompleteSessionToken | null>(null);
-  const [suggestions, setSuggestions] = useState<google.maps.places.AutocompleteSuggestion[]>([]);
+interface PhotonResponse {
+  features?: PhotonFeature[];
+}
+
+function formatAddress(properties: NonNullable<PhotonFeature['properties']>): string {
+  const parts = [
+    properties.name,
+    [properties.housenumber, properties.street].filter(Boolean).join(' '),
+    properties.district,
+    properties.city,
+    properties.county,
+    properties.state,
+    properties.postcode,
+    properties.country,
+  ].filter(Boolean);
+  return Array.from(new Set(parts)).join(', ');
+}
+
+export function useAutocompleteSuggestions(inputString: string, enabled: boolean) {
+  const [suggestions, setSuggestions] = useState<PlaceSuggestion[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!enabled || !placesLib) {
-      setSuggestions([]);
-      setIsLoading(false);
-      return;
-    }
-
-    const trimmed = inputString.trim();
-    if (!trimmed) {
+    const query = inputString.trim();
+    if (!enabled || query.length < 2) {
       setSuggestions([]);
       setIsLoading(false);
       setError(null);
       return;
     }
 
-    let cancelled = false;
+    const controller = new AbortController();
     const timer = window.setTimeout(async () => {
+      setIsLoading(true);
+      setError(null);
       try {
-        const { AutocompleteSessionToken, AutocompleteSuggestion } = placesLib;
-
-        if (!sessionTokenRef.current) {
-          sessionTokenRef.current = new AutocompleteSessionToken();
-        }
-
-        setIsLoading(true);
-        setError(null);
-
-        const request: google.maps.places.AutocompleteRequest = {
-          input: trimmed,
-          sessionToken: sessionTokenRef.current,
-          includedRegionCodes: ['lk'],
-          region: 'lk',
-          language: 'en',
-        };
-
-        const res = await AutocompleteSuggestion.fetchAutocompleteSuggestions(request);
-        if (!cancelled) {
-          setSuggestions(res.suggestions ?? []);
-          setIsLoading(false);
-        }
+        const params = new URLSearchParams({
+          q: query,
+          limit: '7',
+          lang: 'en',
+          bbox: '79.5,5.8,82.0,9.9',
+        });
+        const response = await fetch('https://photon.komoot.io/api/?' + params.toString(), {
+          signal: controller.signal,
+          headers: { Accept: 'application/json' },
+        });
+        if (!response.ok) throw new Error('Location search service is temporarily unavailable.');
+        const data = (await response.json()) as PhotonResponse;
+        const mapped = (data.features || [])
+          .map((feature, index) => {
+            const properties = feature.properties || {};
+            const coordinates = feature.geometry?.coordinates;
+            if (!coordinates || coordinates.length < 2) return null;
+            if (properties.countrycode && properties.countrycode.toLowerCase() !== 'lk') return null;
+            if (properties.country && properties.country.toLowerCase() !== 'sri lanka') return null;
+            const formattedAddress = formatAddress(properties);
+            if (!formattedAddress) return null;
+            const mainText = properties.name || properties.street || properties.city || properties.district || formattedAddress;
+            const secondaryText = formattedAddress === mainText ? 'Sri Lanka' : formattedAddress.replace(mainText + ', ', '');
+            return {
+              id: String(properties.osm_type || 'place') + '-' + String(properties.osm_id || index),
+              mainText,
+              secondaryText,
+              formattedAddress,
+              longitude: coordinates[0],
+              latitude: coordinates[1],
+            } satisfies PlaceSuggestion;
+          })
+          .filter((item): item is PlaceSuggestion => item !== null);
+        setSuggestions(mapped);
+        if (mapped.length === 0) setError('No matching places found in Sri Lanka. Try another street, town, or landmark.');
       } catch (err) {
-        if (cancelled) return;
-        setIsLoading(false);
+        if (controller.signal.aborted) return;
         setSuggestions([]);
-        if (isQuotaError(err)) {
-          window.dispatchEvent(new CustomEvent('gmp-quota-exceeded'));
-          setError('Location search quota reached. Please try again later.');
-        } else {
-          setError('Unable to load location suggestions right now.');
-        }
+        setError(err instanceof Error ? err.message : 'Unable to search locations right now.');
+      } finally {
+        if (!controller.signal.aborted) setIsLoading(false);
       }
-    }, 220);
+    }, 350);
 
     return () => {
-      cancelled = true;
       window.clearTimeout(timer);
+      controller.abort();
     };
-  }, [placesLib, inputString, enabled]);
+  }, [inputString, enabled]);
 
-  const resetSession = useCallback(() => {
-    sessionTokenRef.current = null;
+  const resetSession = () => {
     setSuggestions([]);
     setError(null);
-  }, []);
-
-  return {
-    suggestions,
-    isLoading,
-    error,
-    resetSession,
   };
+
+  return { suggestions, isLoading, error, resetSession };
 }
