@@ -176,7 +176,7 @@ export default function Ride() {
               <button
                 type="button"
                 onClick={handleReset}
-                className="w-full min-h-[48px] bg-[#08264A] hover:bg-[#061c38] text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors"
+                className="w-full min-h-[48px] bg-[#0143B0] hover:bg-[#00358F] text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors"
               >
                 Plan Another Route
               </button>
@@ -293,7 +293,7 @@ export default function Ride() {
                 disabled={!canContinue}
                 className={`w-full min-h-[44px] sm:min-h-[48px] flex items-center justify-center space-x-2 font-bold py-2.5 sm:py-3 px-5 sm:px-6 rounded-xl shadow-md transition-all text-sm ${
                   canContinue
-                    ? 'bg-[#FFD21F] hover:bg-[#f6c612] text-[#08264A] cursor-pointer'
+                    ? 'bg-[#FFD21F] hover:bg-[#f6c612] text-[#0143B0] cursor-pointer'
                     : 'bg-slate-200 text-slate-500 cursor-not-allowed shadow-none'
                 }`}
               >
@@ -311,9 +311,9 @@ export default function Ride() {
           </div>
 
           {/* Safety & Quality Commitment */}
-          <div className="bg-[#08264A] text-white p-4 sm:p-7 rounded-2xl sm:rounded-3xl space-y-2 sm:space-y-2.5 shadow-lg">
+          <div className="bg-[#0143B0] text-white p-4 sm:p-7 rounded-2xl sm:rounded-3xl space-y-2 sm:space-y-2.5 shadow-lg">
             <div className="flex items-center space-x-3">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#FFD21F] text-[#08264A] flex items-center justify-center font-bold shrink-0">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#FFD21F] text-[#0143B0] flex items-center justify-center font-bold shrink-0">
                 <Shield className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <h3 className="font-bold text-base sm:text-lg text-white">The WOLET Safety Commitment</h3>
@@ -365,7 +365,7 @@ export default function Ride() {
                 </div>
                 <div className="w-full pt-2.5 sm:pt-3 border-t border-slate-200 flex items-center justify-between gap-2 text-xs sm:text-sm font-semibold text-[#0759A6]">
                   <span>{cat.capacity}</span>
-                  <span className={isSelected ? 'text-[#08264A] font-bold' : ''}>
+                  <span className={isSelected ? 'text-[#0143B0] font-bold' : ''}>
                     {isSelected ? 'Selected ✓' : 'Select'}
                   </span>
                 </div>
@@ -380,7 +380,7 @@ export default function Ride() {
   return (
     <div className="bg-white text-[#14243A]">
       {/* Hero Section */}
-      <section className="bg-[#08264A] text-white py-7 sm:py-16 relative overflow-hidden">
+      <section className="bg-[#0143B0] text-white py-7 sm:py-16 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-25">
           <img
             src={colomboLotusHeroImg}
@@ -388,7 +388,7 @@ export default function Ride() {
             decoding="async"
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#08264A] via-[#08264A]/90 to-[#08264A]/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0143B0] via-[#0143B0]/90 to-[#0143B0]/55" />
         </div>
 
         <div className="max-w-7xl mx-auto mobile-px sm:px-6 lg:px-8 relative z-10">
