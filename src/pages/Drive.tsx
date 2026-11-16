@@ -36,7 +36,7 @@ export default function Drive() {
   return (
     <div className="bg-white text-[#14243A]">
       {/* Hero Section */}
-      <section className="bg-[#08264A] text-white py-7 sm:py-16 lg:py-20 relative overflow-hidden">
+      <section className="bg-[#0143B0] text-white py-7 sm:py-16 lg:py-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-25">
           <img
             src={driverPartnerImg}
@@ -44,7 +44,7 @@ export default function Drive() {
             decoding="async"
             className="w-full h-full object-cover object-[50%_20%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#08264A] via-[#08264A]/90 to-[#08264A]/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0143B0] via-[#0143B0]/90 to-[#0143B0]/55" />
         </div>
 
         <div className="max-w-7xl mx-auto mobile-px sm:px-6 lg:px-8 relative z-10">
@@ -141,7 +141,7 @@ export default function Drive() {
                       consent: false,
                     });
                   }}
-                  className="bg-[#08264A] hover:bg-[#061c38] text-white font-bold px-6 min-h-[46px] rounded-xl text-sm transition-colors"
+                  className="bg-[#0143B0] hover:bg-[#00358F] text-white font-bold px-6 min-h-[46px] rounded-xl text-sm transition-colors"
                 >
                   Submit Another Application
                 </button>
@@ -308,7 +308,7 @@ export default function Drive() {
 
                 <button
                   type="submit"
-                  className="w-full min-h-[44px] sm:min-h-[48px] flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#08264A] font-bold py-2.5 sm:py-3.5 px-6 rounded-xl shadow-lg transition-all text-sm"
+                  className="w-full min-h-[44px] sm:min-h-[48px] flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#0143B0] font-bold py-2.5 sm:py-3.5 px-6 rounded-xl shadow-lg transition-all text-sm"
                 >
                   <span>Submit Application</span>
                   <Send className="w-4 h-4 shrink-0" />
