@@ -66,8 +66,8 @@ export default function Navbar() {
       <header
         className={`fixed top-0 inset-x-0 lg:sticky lg:top-0 z-50 transition-[background-color,box-shadow] duration-200 border-b border-white/10 pt-[env(safe-area-inset-top)] lg:pt-0 ${
           scrolled
-            ? 'bg-[#08264A]/98 backdrop-blur-md shadow-xl lg:py-2.5'
-            : 'bg-[#08264A] lg:py-3.5'
+            ? 'bg-[#0143B0]/98 backdrop-blur-md shadow-xl lg:py-2.5'
+            : 'bg-[#0143B0] lg:py-3.5'
         }`}
       >
         <div className="max-w-7xl mx-auto mobile-px sm:px-6 lg:px-8">
@@ -114,7 +114,7 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center shrink-0">
               <Link
                 to="/ride"
-                className="inline-flex items-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#08264A] font-bold px-5 py-2.5 rounded-xl shadow-md transition-transform hover:-translate-y-0.5 text-sm whitespace-nowrap shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                className="inline-flex items-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#0143B0] font-bold px-5 py-2.5 rounded-xl shadow-md transition-transform hover:-translate-y-0.5 text-sm whitespace-nowrap shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 <span>Explore WOLET</span>
                 <ArrowRight className="w-4 h-4 shrink-0" />
@@ -126,7 +126,7 @@ export default function Navbar() {
               <Link
                 to="/ride"
                 onClick={() => setIsOpen(false)}
-                className="inline-flex items-center justify-center bg-[#FFD21F] hover:bg-[#f6c612] text-[#08264A] font-bold px-3 sm:px-4 min-h-[40px] sm:min-h-[44px] min-w-[44px] rounded-lg sm:rounded-xl text-xs sm:text-sm shadow-sm whitespace-nowrap shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                className="inline-flex items-center justify-center bg-[#FFD21F] hover:bg-[#f6c612] text-[#0143B0] font-bold px-3 sm:px-4 min-h-[40px] sm:min-h-[44px] min-w-[44px] rounded-lg sm:rounded-xl text-xs sm:text-sm shadow-sm whitespace-nowrap shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 Explore
               </Link>
@@ -167,7 +167,7 @@ export default function Navbar() {
         id="mobile-navigation-drawer"
         aria-label="Mobile Navigation"
         aria-hidden={!isOpen}
-        className={`lg:hidden fixed left-0 right-0 top-[calc(3.5rem+1px+env(safe-area-inset-top))] sm:top-[calc(4rem+1px+env(safe-area-inset-top))] bg-[#08264A] border-t border-white/15 shadow-2xl z-[48] max-h-[calc(100dvh-3.5rem-1px-env(safe-area-inset-top))] sm:max-h-[calc(100dvh-4rem-1px-env(safe-area-inset-top))] overflow-y-auto overscroll-contain transition-[opacity,transform,visibility] duration-200 ease-out ${
+        className={`lg:hidden fixed left-0 right-0 top-[calc(3.5rem+1px+env(safe-area-inset-top))] sm:top-[calc(4rem+1px+env(safe-area-inset-top))] bg-[#0143B0] border-t border-white/15 shadow-2xl z-[48] max-h-[calc(100dvh-3.5rem-1px-env(safe-area-inset-top))] sm:max-h-[calc(100dvh-4rem-1px-env(safe-area-inset-top))] overflow-y-auto overscroll-contain transition-[opacity,transform,visibility] duration-200 ease-out ${
           isOpen
             ? 'opacity-100 translate-y-0 pointer-events-auto visible'
             : 'opacity-0 -translate-y-2 pointer-events-none invisible'
@@ -213,7 +213,7 @@ export default function Navbar() {
               to="/drive"
               tabIndex={isOpen ? 0 : -1}
               onClick={() => setIsOpen(false)}
-              className="w-full min-h-[48px] flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#08264A] font-bold py-3 px-4 rounded-xl shadow-lg text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              className="w-full min-h-[48px] flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#0143B0] font-bold py-3 px-4 rounded-xl shadow-lg text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
               <span>Become a Partner</span>
               <ArrowRight className="w-4 h-4 shrink-0" />
