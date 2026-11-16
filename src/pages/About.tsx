@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div className="bg-white text-[#14243A]">
       {/* Hero Banner */}
-      <section className="relative bg-[#08264A] text-white py-7 sm:py-16 lg:py-20 overflow-hidden">
+      <section className="relative bg-[#0143B0] text-white py-7 sm:py-16 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={colomboLotusHeroImg}
@@ -15,7 +15,7 @@ export default function About() {
             decoding="async"
             className="w-full h-full object-cover object-center opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#08264A] via-[#08264A]/90 to-[#08264A]/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0143B0] via-[#0143B0]/90 to-[#0143B0]/55" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto mobile-px sm:px-6 lg:px-8">
@@ -48,8 +48,8 @@ export default function About() {
               {/* Vision & Mission Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3 sm:gap-4 pt-1">
                 <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5 sm:space-y-2 shadow-sm">
-                  <div className="flex items-center space-x-2.5 text-[#08264A] font-bold">
-                    <span className="w-8 h-8 rounded-lg bg-[#FFD21F]/30 flex items-center justify-center text-[#08264A] shrink-0">
+                  <div className="flex items-center space-x-2.5 text-[#0143B0] font-bold">
+                    <span className="w-8 h-8 rounded-lg bg-[#FFD21F]/30 flex items-center justify-center text-[#0143B0] shrink-0">
                       <Eye className="w-4 h-4" />
                     </span>
                     <span className="text-sm uppercase tracking-wider">Our Vision</span>
@@ -60,8 +60,8 @@ export default function About() {
                 </div>
 
                 <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5 sm:space-y-2 shadow-sm">
-                  <div className="flex items-center space-x-2.5 text-[#08264A] font-bold">
-                    <span className="w-8 h-8 rounded-lg bg-[#FFD21F]/30 flex items-center justify-center text-[#08264A] shrink-0">
+                  <div className="flex items-center space-x-2.5 text-[#0143B0] font-bold">
+                    <span className="w-8 h-8 rounded-lg bg-[#FFD21F]/30 flex items-center justify-center text-[#0143B0] shrink-0">
                       <Target className="w-4 h-4" />
                     </span>
                     <span className="text-sm uppercase tracking-wider">Our Mission</span>
@@ -75,7 +75,7 @@ export default function About() {
               <div className="pt-1">
                 <Link
                   to="/drive"
-                  className="inline-flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#08264A] font-bold px-6 sm:px-7 min-h-[44px] sm:min-h-[48px] rounded-xl shadow-md transition-all text-sm w-full sm:w-auto"
+                  className="inline-flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#0143B0] font-bold px-6 sm:px-7 min-h-[44px] sm:min-h-[48px] rounded-xl shadow-md transition-all text-sm w-full sm:w-auto"
                 >
                   <span>Join Our Partner Network</span>
                   <ArrowRight className="w-4 h-4 shrink-0" />
