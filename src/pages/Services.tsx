@@ -42,7 +42,7 @@ export default function Services() {
   return (
     <div className="bg-white text-[#14243A]">
       {/* Hero Banner */}
-      <section className="relative bg-[#08264A] text-white py-7 sm:py-16 lg:py-20 overflow-hidden">
+      <section className="relative bg-[#0143B0] text-white py-7 sm:py-16 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={colomboLotusHeroImg}
@@ -50,7 +50,7 @@ export default function Services() {
             decoding="async"
             className="w-full h-full object-cover object-center opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#08264A] via-[#08264A]/90 to-[#08264A]/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0143B0] via-[#0143B0]/90 to-[#0143B0]/55" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto mobile-px sm:px-6 lg:px-8">
@@ -92,7 +92,7 @@ export default function Services() {
                       decoding="async"
                       className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-2.5 right-2.5 sm:top-4 sm:right-4 bg-[#08264A]/90 backdrop-blur-md text-[#FFD21F] text-[11px] sm:text-xs font-bold px-2.5 sm:px-3 py-1 rounded-lg sm:rounded-xl shadow-md">
+                    <div className="absolute top-2.5 right-2.5 sm:top-4 sm:right-4 bg-[#0143B0]/90 backdrop-blur-md text-[#FFD21F] text-[11px] sm:text-xs font-bold px-2.5 sm:px-3 py-1 rounded-lg sm:rounded-xl shadow-md">
                       {service.status}
                     </div>
                   </div>
@@ -115,7 +115,7 @@ export default function Services() {
                 <div className="p-4 sm:p-5 lg:p-7 pt-0">
                   <Link
                     to={service.link}
-                    className="w-full min-h-[44px] sm:min-h-[48px] flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#08264A] font-bold py-2.5 sm:py-3 px-4 rounded-xl shadow-sm transition-all text-sm"
+                    className="w-full min-h-[44px] sm:min-h-[48px] flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#0143B0] font-bold py-2.5 sm:py-3 px-4 rounded-xl shadow-sm transition-all text-sm"
                   >
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 shrink-0" />
@@ -143,7 +143,7 @@ export default function Services() {
             </Link>
             <Link
               to="/drive"
-              className="inline-flex items-center justify-center bg-[#FFD21F] hover:bg-[#f6c612] text-[#08264A] font-bold px-6 sm:px-8 min-h-[44px] sm:min-h-[48px] rounded-xl shadow-md text-sm transition-all w-full sm:w-auto"
+              className="inline-flex items-center justify-center bg-[#FFD21F] hover:bg-[#f6c612] text-[#0143B0] font-bold px-6 sm:px-8 min-h-[44px] sm:min-h-[48px] rounded-xl shadow-md text-sm transition-all w-full sm:w-auto"
             >
               Drive with WOLET
             </Link>
