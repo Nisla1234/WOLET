@@ -59,7 +59,6 @@ export default function Navbar() {
     { name: 'Drive with WOLET', path: '/drive' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
-    { name: 'Driver Policy', path: '/driver-subscription-policy' },
   ];
 
   return (
