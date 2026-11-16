@@ -61,9 +61,9 @@ export default function Help() {
   return (
     <div className="bg-white text-[#14243A]">
       {/* Hero */}
-      <section className="bg-[#08264A] text-white py-8 sm:py-16 lg:py-20 relative overflow-hidden">
+      <section className="bg-[#0143B0] text-white py-8 sm:py-16 lg:py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto mobile-px sm:px-6 lg:px-8 text-center space-y-4 sm:space-y-5 relative z-10">
-          <span className="bg-[#FFD21F] text-[#08264A] font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider inline-block">
+          <span className="bg-[#FFD21F] text-[#0143B0] font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider inline-block">
             Help & Support Center
           </span>
           <h1 className="fluid-page-title font-extrabold tracking-tight">
@@ -108,7 +108,7 @@ export default function Help() {
               onClick={() => setActiveCategory(cat.id)}
               className={`min-h-[44px] sm:min-h-[40px] px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap ${
                 activeCategory === cat.id
-                  ? 'bg-[#08264A] text-[#FFD21F] shadow-md'
+                  ? 'bg-[#0143B0] text-[#FFD21F] shadow-md'
                   : 'bg-slate-100 text-[#14243A] hover:bg-slate-200'
               }`}
             >
@@ -163,7 +163,7 @@ export default function Help() {
         </div>
 
         {/* Contact Banner */}
-        <div className="bg-[#08264A] text-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-5 shadow-xl">
+        <div className="bg-[#0143B0] text-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-5 shadow-xl">
           <div className="space-y-1 sm:space-y-1.5 text-center sm:text-left">
             <h2 className="text-lg sm:text-xl font-bold text-[#FFD21F]">Still have questions?</h2>
             <p className="text-white/85 text-xs sm:text-sm">
@@ -172,7 +172,7 @@ export default function Help() {
           </div>
           <Link
             to="/contact"
-            className="w-full sm:w-auto min-h-[44px] sm:min-h-[48px] inline-flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#08264A] font-bold px-6 py-2.5 sm:py-3 rounded-xl shadow-md text-sm shrink-0"
+            className="w-full sm:w-auto min-h-[44px] sm:min-h-[48px] inline-flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#0143B0] font-bold px-6 py-2.5 sm:py-3 rounded-xl shadow-md text-sm shrink-0"
           >
             <span>Contact Us</span>
             <ArrowRight className="w-4 h-4 shrink-0" />
