@@ -17,7 +17,7 @@ export default function Privacy() {
 
         <section className={sectionClass}>
           <p className={paragraphClass}>
-            Operated by Ryzite (Pvt) Ltd under the WOLET brand in Sri Lanka. We respect your privacy and are committed to protecting the personal data of our riders and driver-partners ("Users," "you") across Sri Lanka. This Privacy Policy explains how we collect, use, store, disclose, and safeguard your information when you use our mobile application (the "App") and website.
+            Operated by WOLET in Sri Lanka. We respect your privacy and are committed to protecting the personal data of our riders and driver-partners ("Users," "you") across Sri Lanka. This Privacy Policy explains how we collect, use, store, disclose, and safeguard your information when you use our mobile application (the "App") and website.
           </p>
           <p className={paragraphClass}>
             By downloading, registering, or using WOLET, you acknowledge this Privacy Policy and the practices described in it.
@@ -107,7 +107,7 @@ export default function Privacy() {
           <h2 className={headingClass}>9. Contact Us</h2>
           <p className={paragraphClass}>If you have questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact WOLET:</p>
           <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 space-y-3 text-sm text-slate-700">
-            <p><strong className="text-[#10243D]">Company:</strong> Ryzite (Pvt) Ltd (WOLET)</p>
+            <p><strong className="text-[#10243D]">Company:</strong> WOLET</p>
             <p><strong className="text-[#10243D]">Address:</strong> No. 123, Galle Road, Colombo 03, Sri Lanka</p>
             <p><strong className="text-[#10243D]">Email:</strong> <a className="text-[#0759A6] underline" href="mailto:info@wolet.lk">info@wolet.lk</a></p>
             <p><strong className="text-[#10243D]">Phone / WhatsApp:</strong> <a className="text-[#0759A6] underline" href="https://wa.me/94776926922" target="_blank" rel="noreferrer">077 692 6922</a></p>
@@ -117,7 +117,7 @@ export default function Privacy() {
         <div className="border-t border-slate-200 pt-8 space-y-3">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-[#10243D]">WOLET යෙදුම් සේවාව සඳහා පෞද්ගලිකත්ව ප්‍රතිපත්තිය</h2>
           <p className="text-slate-500 text-sm">අවසන් වරට යාවත්කාලීන කළේ: 2026 නොවැම්බර් 16</p>
-          <p className={paragraphClass}>මෙහෙයවනු ලබන්නේ: ශ්‍රී ලංකාවේ WOLET සන්නාමය යටතේ ක්‍රියාත්මක වන Ryzite (Pvt) Ltd විසිනි.</p>
+          <p className={paragraphClass}>මෙහෙයවනු ලබන්නේ: ශ්‍රී ලංකාවේ WOLET විසිනි.</p>
           <p className={paragraphClass}>අපි ඔබගේ පෞද්ගලිකත්වයට ගරු කරන අතර, ශ්‍රී ලංකාව පුරා සිටින අපගේ මගීන්ගේ සහ රියදුරු-හවුල්කරුවන්ගේ ("පරිශීලකයින්", "ඔබ") පුද්ගලික දත්ත ආරක්ෂා කිරීමට කැපවී සිටිමු. ඔබ අපගේ ජංගම දුරකථන යෙදුම ("යෙදුම") සහ වෙබ් අඩවිය භාවිතා කරන විට ඔබගේ තොරතුරු රැස් කරන, භාවිතා කරන, ගබඩා කරන, හෙළිදරව් කරන සහ ආරක්ෂා කරන ආකාරය මෙම ප්‍රතිපත්තියෙන් පැහැදිලි කෙරේ.</p>
           <p className={paragraphClass}>WOLET බාගත කිරීමෙන්, ලියාපදිංචි වීමෙන් හෝ භාවිතා කිරීමෙන්, මෙම ප්‍රතිපත්තියේ විස්තර කර ඇති ක්‍රියාපටිපාටි පිළිබඳව ඔබ දැනුවත් වන අතර ඒවාට අදාළ වන නීති සහ යෙදුම් කොන්දේසි අනුව එකඟ වේ.</p>
 
@@ -187,7 +187,7 @@ export default function Privacy() {
           <h3 className={headingClass}>9. අප අමතන්න</h3>
           <p className={paragraphClass}>මෙම පෞද්ගලිකත්ව ප්‍රතිපත්තිය හෝ ඔබගේ පුද්ගලික දත්ත සම්බන්ධයෙන් ප්‍රශ්න, ගැටළු හෝ ඉල්ලීම් ඇත්නම්, කරුණාකර WOLET අමතන්න:</p>
           <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 space-y-3 text-sm text-slate-700">
-            <p><strong className="text-[#10243D]">ආයතනය:</strong> Ryzite (Pvt) Ltd (WOLET)</p>
+            <p><strong className="text-[#10243D]">ආයතනය:</strong> WOLET</p>
             <p><strong className="text-[#10243D]">ලිපිනය:</strong> No. 123, Galle Road, Colombo 03, Sri Lanka</p>
             <p><strong className="text-[#10243D]">විද්‍යුත් තැපෑල:</strong> <a className="text-[#0759A6] underline" href="mailto:info@wolet.lk">info@wolet.lk</a></p>
             <p><strong className="text-[#10243D]">දුරකථන / WhatsApp:</strong> <a className="text-[#0759A6] underline" href="https://wa.me/94776926922" target="_blank" rel="noreferrer">077 692 6922</a></p>
