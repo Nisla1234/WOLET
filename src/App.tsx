@@ -20,6 +20,7 @@ import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Refund from './pages/Refund';
 import Cancellation from './pages/Cancellation';
+import DriverSubscriptionPolicy from './pages/DriverSubscriptionPolicy';
 
 export default function App() {
   return (
@@ -43,6 +44,7 @@ export default function App() {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/refund" element={<Refund />} />
             <Route path="/cancellation" element={<Cancellation />} />
+            <Route path="/driver-subscription-policy" element={<DriverSubscriptionPolicy />} />
           </Routes>
         </main>
         <Footer />
