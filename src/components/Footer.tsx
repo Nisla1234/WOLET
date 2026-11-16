@@ -130,7 +130,7 @@ export default function Footer() {
               Privacy Policy
             </Link>
             <Link to="/driver-subscription-policy" className="inline-flex items-center min-h-[44px] sm:min-h-0 px-1.5 sm:px-0 sm:py-1 hover:text-[#FFD21F] transition-colors whitespace-nowrap">
-              Refund Policy
+              Driver Subscription &amp; Refund Policy
             </Link>
             <Link to="/cancellation" className="inline-flex items-center min-h-[44px] sm:min-h-0 px-1.5 sm:px-0 sm:py-1 hover:text-[#FFD21F] transition-colors whitespace-nowrap">
               Cancellation Policy
