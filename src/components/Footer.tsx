@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#08264A] text-white pt-9 sm:pt-14 lg:pt-16 pb-7 sm:pb-10 border-t border-white/10">
+    <footer className="bg-[#0143B0] text-white pt-9 sm:pt-14 lg:pt-16 pb-7 sm:pb-10 border-t border-white/10">
       <div className="max-w-7xl mx-auto mobile-px sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10 mb-7 sm:mb-12">
           {/* Brand Info */}
@@ -99,20 +99,20 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+94112345678"
+                  href="tel:+94776926922"
                   className="inline-flex items-center space-x-3 min-h-[44px] sm:min-h-[36px] hover:text-[#FFD21F] transition-colors"
                 >
                   <Phone className="w-4 h-4 text-[#FFD21F] shrink-0" />
-                  <span className="tabular-nums">+94 11 234 5678</span>
+                  <span className="tabular-nums">077 692 6922</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@wolet.lk"
+                  href="https://wa.me/94776926922" target="_blank" rel="noreferrer"
                   className="inline-flex items-center space-x-3 min-h-[44px] sm:min-h-[36px] hover:text-[#FFD21F] transition-colors break-all"
                 >
-                  <Mail className="w-4 h-4 text-[#FFD21F] shrink-0" />
-                  <span>info@wolet.lk</span>
+                  <Phone className="w-4 h-4 text-[#FFD21F] shrink-0" />
+                  <span>WhatsApp WOLET Support</span>
                 </a>
               </li>
             </ul>
@@ -129,7 +129,7 @@ export default function Footer() {
             <Link to="/privacy" className="inline-flex items-center min-h-[44px] sm:min-h-0 px-1.5 sm:px-0 sm:py-1 hover:text-[#FFD21F] transition-colors whitespace-nowrap">
               Privacy Policy
             </Link>
-            <Link to="/refund" className="inline-flex items-center min-h-[44px] sm:min-h-0 px-1.5 sm:px-0 sm:py-1 hover:text-[#FFD21F] transition-colors whitespace-nowrap">
+            <Link to="/driver-subscription-policy" className="inline-flex items-center min-h-[44px] sm:min-h-0 px-1.5 sm:px-0 sm:py-1 hover:text-[#FFD21F] transition-colors whitespace-nowrap">
               Refund Policy
             </Link>
             <Link to="/cancellation" className="inline-flex items-center min-h-[44px] sm:min-h-0 px-1.5 sm:px-0 sm:py-1 hover:text-[#FFD21F] transition-colors whitespace-nowrap">
