@@ -39,7 +39,7 @@ export default function TukTukService() {
   return (
     <div className="bg-white text-[#14243A]">
       {/* Hero Section */}
-      <section className="bg-[#08264A] text-white py-7 sm:py-16 lg:py-20 relative overflow-hidden">
+      <section className="bg-[#0143B0] text-white py-7 sm:py-16 lg:py-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={tuktukRidesImg}
@@ -47,12 +47,12 @@ export default function TukTukService() {
             decoding="async"
             className="w-full h-full object-cover object-center opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#08264A] via-[#08264A]/90 to-[#08264A]/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0143B0] via-[#0143B0]/90 to-[#0143B0]/55" />
         </div>
 
         <div className="max-w-7xl mx-auto mobile-px sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl space-y-2.5 sm:space-y-4">
-            <span className="inline-block bg-[#FFD21F] text-[#08264A] font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider">
+            <span className="inline-block bg-[#FFD21F] text-[#0143B0] font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider">
               Service Detail
             </span>
             <h1 className="fluid-page-title font-extrabold tracking-tight">
@@ -97,7 +97,7 @@ export default function TukTukService() {
             <div className="pt-1 sm:pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4">
               <Link
                 to="/ride"
-                className="inline-flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#08264A] font-bold px-6 sm:px-7 min-h-[44px] sm:min-h-[48px] rounded-xl shadow-md transition-all text-sm"
+                className="inline-flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#0143B0] font-bold px-6 sm:px-7 min-h-[44px] sm:min-h-[48px] rounded-xl shadow-md transition-all text-sm"
               >
                 <span>Plan a Ride Enquiry</span>
                 <ArrowRight className="w-4 h-4 shrink-0" />
@@ -121,7 +121,7 @@ export default function TukTukService() {
                   decoding="async"
                   className="w-full h-full object-cover object-center"
                 />
-                <div className="hidden sm:flex absolute bottom-4 left-4 right-4 bg-[#08264A]/90 backdrop-blur-md p-4 rounded-2xl border border-white/20 text-white items-center justify-between gap-3">
+                <div className="hidden sm:flex absolute bottom-4 left-4 right-4 bg-[#0143B0]/90 backdrop-blur-md p-4 rounded-2xl border border-white/20 text-white items-center justify-between gap-3">
                   <div className="min-w-0">
                     <span className="text-[10px] text-[#FFD21F] font-bold uppercase tracking-wider block">
                       WOLET Category
@@ -130,12 +130,12 @@ export default function TukTukService() {
                       Authentic Sri Lankan Three-Wheeler
                     </h3>
                   </div>
-                  <span className="bg-[#FFD21F] text-[#08264A] text-xs font-bold px-3 py-1 rounded-xl shrink-0">
+                  <span className="bg-[#FFD21F] text-[#0143B0] text-xs font-bold px-3 py-1 rounded-xl shrink-0">
                     Tuk Tuk
                   </span>
                 </div>
               </div>
-              <div className="sm:hidden mt-1.5 bg-[#08264A] p-2.5 rounded-xl text-white flex items-center justify-between gap-2.5">
+              <div className="sm:hidden mt-1.5 bg-[#0143B0] p-2.5 rounded-xl text-white flex items-center justify-between gap-2.5">
                 <div className="min-w-0">
                   <span className="text-[10px] text-[#FFD21F] font-bold uppercase tracking-wider block">
                     WOLET Category
@@ -144,7 +144,7 @@ export default function TukTukService() {
                     Authentic Sri Lankan Three-Wheeler
                   </h3>
                 </div>
-                <span className="bg-[#FFD21F] text-[#08264A] text-[11px] font-bold px-2.5 py-1 rounded-lg shrink-0">
+                <span className="bg-[#FFD21F] text-[#0143B0] text-[11px] font-bold px-2.5 py-1 rounded-lg shrink-0">
                   Tuk Tuk
                 </span>
               </div>
@@ -164,7 +164,7 @@ export default function TukTukService() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             <div className="bg-white p-4 sm:p-6 lg:p-7 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-2.5 sm:space-y-3">
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-[#FFD21F]/25 text-[#08264A] font-bold flex items-center justify-center text-base sm:text-lg tabular-nums">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-[#FFD21F]/25 text-[#0143B0] font-bold flex items-center justify-center text-base sm:text-lg tabular-nums">
                 1
               </div>
               <h3 className="font-bold text-[#14243A] text-lg">Set Your Location</h3>
@@ -173,7 +173,7 @@ export default function TukTukService() {
               </p>
             </div>
             <div className="bg-white p-4 sm:p-6 lg:p-7 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-2.5 sm:space-y-3">
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-[#FFD21F]/25 text-[#08264A] font-bold flex items-center justify-center text-base sm:text-lg tabular-nums">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-[#FFD21F]/25 text-[#0143B0] font-bold flex items-center justify-center text-base sm:text-lg tabular-nums">
                 2
               </div>
               <h3 className="font-bold text-[#14243A] text-lg">Select Tuk Tuk Rides</h3>
@@ -182,7 +182,7 @@ export default function TukTukService() {
               </p>
             </div>
             <div className="bg-white p-4 sm:p-6 lg:p-7 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-2.5 sm:space-y-3">
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-[#FFD21F]/25 text-[#08264A] font-bold flex items-center justify-center text-base sm:text-lg tabular-nums">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-[#FFD21F]/25 text-[#0143B0] font-bold flex items-center justify-center text-base sm:text-lg tabular-nums">
                 3
               </div>
               <h3 className="font-bold text-[#14243A] text-lg">Submit Route Enquiry</h3>
