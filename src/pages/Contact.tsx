@@ -26,7 +26,7 @@ export default function Contact() {
   return (
     <div className="bg-white text-[#14243A]">
       {/* Cinematic Banner */}
-      <section className="relative bg-[#08264A] text-white py-7 sm:py-16 lg:py-20 overflow-hidden">
+      <section className="relative bg-[#0143B0] text-white py-7 sm:py-16 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src={colomboLotusCityscapeImg}
@@ -34,7 +34,7 @@ export default function Contact() {
             decoding="async"
             className="w-full h-full object-cover object-center opacity-30"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#08264A] via-[#08264A]/90 to-[#08264A]/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0143B0] via-[#0143B0]/90 to-[#0143B0]/55" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto mobile-px sm:px-6 lg:px-8">
@@ -79,17 +79,21 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="tel:+94112345678"
+                  href="tel:+94776926922"
                   className="flex items-center space-x-3 min-h-[44px] sm:min-h-[40px] hover:text-[#0759A6] transition-colors tabular-nums"
                 >
                   <Phone className="w-5 h-5 text-[#0759A6] shrink-0" />
-                  <span>+94 11 234 5678</span>
+                  <span>077 692 6922</span>
                 </a>
               </div>
 
+              <a href="https://wa.me/94776926922" target="_blank" rel="noreferrer" className="w-full min-h-[46px] inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] hover:bg-[#1fbd5b] text-white font-bold text-sm shadow-md transition-colors">
+                <Phone className="w-4 h-4" /> Chat with us on WhatsApp
+              </a>
+
               <div className="pt-3 sm:pt-4 border-t border-slate-200">
                 <div className="p-3.5 sm:p-4 rounded-2xl bg-[#FFD21F]/15 border border-[#FFD21F]/40 text-xs sm:text-sm text-[#14243A] space-y-1">
-                  <span className="font-bold block text-[#08264A]">Support Hours</span>
+                  <span className="font-bold block text-[#0143B0]">Support Hours</span>
                   <span>Monday – Friday: 8:30 AM – 5:30 PM (IST)</span>
                 </div>
               </div>
@@ -170,7 +174,7 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full min-h-[44px] sm:min-h-[48px] flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#08264A] font-bold py-2.5 sm:py-3 px-4 rounded-xl shadow-md transition-all text-sm"
+                    className="w-full min-h-[44px] sm:min-h-[48px] flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#0143B0] font-bold py-2.5 sm:py-3 px-4 rounded-xl shadow-md transition-all text-sm"
                   >
                     <span>Send Message</span>
                     <Send className="w-4 h-4 shrink-0" />
@@ -254,7 +258,7 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full min-h-[44px] sm:min-h-[48px] flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#08264A] font-bold py-2.5 sm:py-3 px-4 rounded-xl shadow-md transition-all text-sm"
+                    className="w-full min-h-[44px] sm:min-h-[48px] flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#0143B0] font-bold py-2.5 sm:py-3 px-4 rounded-xl shadow-md transition-all text-sm"
                   >
                     <span>Send Enquiry</span>
                     <Send className="w-4 h-4 shrink-0" />
