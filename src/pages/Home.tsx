@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="bg-white text-[#14243A]">
       {/* Hero Section */}
-      <section className="relative bg-[#08264A] text-white overflow-hidden pt-5 pb-10 sm:pt-12 sm:pb-20 lg:py-16 xl:py-20">
+      <section className="relative bg-[#0143B0] text-white overflow-hidden pt-5 pb-10 sm:pt-12 sm:pb-20 lg:py-16 xl:py-20">
         <div className="absolute inset-0 z-0">
           <img
             src={colomboLotusHeroImg}
@@ -19,7 +19,7 @@ export default function Home() {
             decoding="async"
             className="w-full h-full object-cover object-center opacity-25"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#08264A] via-[#08264A]/90 to-[#08264A]/65" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0143B0] via-[#0143B0]/90 to-[#0143B0]/65" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto mobile-px sm:px-6 lg:px-8">
@@ -36,7 +36,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 pt-1">
                 <Link
                   to="/ride"
-                  className="inline-flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#08264A] font-bold px-5 sm:px-7 min-h-[44px] sm:min-h-[48px] rounded-xl shadow-lg transition-all text-sm sm:text-base whitespace-nowrap"
+                  className="inline-flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#0143B0] font-bold px-5 sm:px-7 min-h-[44px] sm:min-h-[48px] rounded-xl shadow-lg transition-all text-sm sm:text-base whitespace-nowrap"
                 >
                   <span>Explore WOLET</span>
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
@@ -76,8 +76,8 @@ export default function Home() {
                     fetchPriority="high"
                     className="w-full h-full object-cover object-center"
                   />
-                  <div className="hidden sm:block absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#08264A]/85 via-[#08264A]/40 to-transparent pointer-events-none" />
-                  <div className="hidden sm:flex absolute bottom-3.5 left-3.5 right-3.5 bg-[#08264A]/90 backdrop-blur-md p-4 rounded-xl border border-white/15 items-center justify-between gap-3 text-white">
+                  <div className="hidden sm:block absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0143B0]/85 via-[#0143B0]/40 to-transparent pointer-events-none" />
+                  <div className="hidden sm:flex absolute bottom-3.5 left-3.5 right-3.5 bg-[#0143B0]/90 backdrop-blur-md p-4 rounded-xl border border-white/15 items-center justify-between gap-3 text-white">
                     <div className="min-w-0">
                       <p className="text-[11px] text-[#FFD21F] font-semibold uppercase tracking-wider truncate">
                         Colombo Skyline
@@ -86,12 +86,12 @@ export default function Home() {
                         Smart Transit Across Sri Lanka
                       </h2>
                     </div>
-                    <span className="bg-[#FFD21F] text-[#08264A] text-xs font-bold px-2.5 py-1 rounded-lg shrink-0">
+                    <span className="bg-[#FFD21F] text-[#0143B0] text-xs font-bold px-2.5 py-1 rounded-lg shrink-0">
                       WOLET
                     </span>
                   </div>
                 </div>
-                <div className="sm:hidden mt-1.5 bg-[#08264A]/95 px-3 py-2 rounded-xl border border-white/15 flex items-center justify-between gap-2.5 text-white">
+                <div className="sm:hidden mt-1.5 bg-[#0143B0]/95 px-3 py-2 rounded-xl border border-white/15 flex items-center justify-between gap-2.5 text-white">
                   <div className="min-w-0">
                     <p className="text-[10px] text-[#FFD21F] font-semibold uppercase tracking-wider truncate">
                       Colombo Skyline
@@ -100,7 +100,7 @@ export default function Home() {
                       Smart Transit Across Sri Lanka
                     </h2>
                   </div>
-                  <span className="bg-[#FFD21F] text-[#08264A] text-[11px] font-bold px-2.5 py-1 rounded-lg shrink-0">
+                  <span className="bg-[#FFD21F] text-[#0143B0] text-[11px] font-bold px-2.5 py-1 rounded-lg shrink-0">
                     WOLET
                   </span>
                 </div>
@@ -188,7 +188,7 @@ export default function Home() {
               <div className="pt-1">
                 <Link
                   to="/about"
-                  className="inline-flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#08264A] font-bold px-5 sm:px-6 min-h-[44px] sm:min-h-[46px] rounded-xl shadow-sm transition-all text-sm w-full sm:w-auto"
+                  className="inline-flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#0143B0] font-bold px-5 sm:px-6 min-h-[44px] sm:min-h-[46px] rounded-xl shadow-sm transition-all text-sm w-full sm:w-auto"
                 >
                   <span>Learn More About Us</span>
                   <ArrowRight className="w-4 h-4 shrink-0" />
@@ -249,7 +249,7 @@ export default function Home() {
               <div className="px-4 sm:px-5 lg:px-6 pb-3 sm:pb-4 lg:pb-6">
                 <Link
                   to="/ride"
-                  className="inline-flex items-center space-x-1.5 min-h-[44px] sm:min-h-[36px] text-[#0759A6] font-bold text-sm hover:text-[#08264A] transition-colors py-1.5"
+                  className="inline-flex items-center space-x-1.5 min-h-[44px] sm:min-h-[36px] text-[#0759A6] font-bold text-sm hover:text-[#0143B0] transition-colors py-1.5"
                 >
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 shrink-0" />
@@ -279,7 +279,7 @@ export default function Home() {
               <div className="px-4 sm:px-5 lg:px-6 pb-3 sm:pb-4 lg:pb-6">
                 <Link
                   to="/services/tuktuk"
-                  className="inline-flex items-center space-x-1.5 min-h-[44px] sm:min-h-[36px] text-[#0759A6] font-bold text-sm hover:text-[#08264A] transition-colors py-1.5"
+                  className="inline-flex items-center space-x-1.5 min-h-[44px] sm:min-h-[36px] text-[#0759A6] font-bold text-sm hover:text-[#0143B0] transition-colors py-1.5"
                 >
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 shrink-0" />
@@ -309,7 +309,7 @@ export default function Home() {
               <div className="px-4 sm:px-5 lg:px-6 pb-3 sm:pb-4 lg:pb-6">
                 <Link
                   to="/ride"
-                  className="inline-flex items-center space-x-1.5 min-h-[44px] sm:min-h-[36px] text-[#0759A6] font-bold text-sm hover:text-[#08264A] transition-colors py-1.5"
+                  className="inline-flex items-center space-x-1.5 min-h-[44px] sm:min-h-[36px] text-[#0759A6] font-bold text-sm hover:text-[#0143B0] transition-colors py-1.5"
                 >
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 shrink-0" />
@@ -321,7 +321,7 @@ export default function Home() {
           <div className="text-center mt-6 sm:mt-10">
             <Link
               to="/services"
-              className="inline-flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#08264A] font-bold px-6 sm:px-8 min-h-[44px] sm:min-h-[48px] rounded-xl shadow-md transition-all text-sm w-full sm:w-auto"
+              className="inline-flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#0143B0] font-bold px-6 sm:px-8 min-h-[44px] sm:min-h-[48px] rounded-xl shadow-md transition-all text-sm w-full sm:w-auto"
             >
               <span>View All Services</span>
               <ArrowRight className="w-4 h-4 shrink-0" />
@@ -331,11 +331,11 @@ export default function Home() {
       </section>
 
       {/* Partner Callout Section */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-[#08264A] text-white relative overflow-hidden">
+      <section className="py-8 sm:py-12 lg:py-16 bg-[#0143B0] text-white relative overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto mobile-px sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7 space-y-4 sm:space-y-5">
-              <span className="inline-block bg-[#FFD21F] text-[#08264A] font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider">
+              <span className="inline-block bg-[#FFD21F] text-[#0143B0] font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider">
                 Driver & Fleet Partnerships
               </span>
               <h2 className="fluid-section-title sm:text-4xl lg:text-[2.75rem] font-extrabold tracking-tight leading-tight">
@@ -363,7 +363,7 @@ export default function Home() {
               <div className="pt-1 sm:pt-2">
                 <Link
                   to="/drive"
-                  className="inline-flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#08264A] font-bold px-6 sm:px-7 min-h-[44px] sm:min-h-[48px] rounded-xl shadow-xl transition-all text-sm sm:text-base w-full sm:w-auto"
+                  className="inline-flex items-center justify-center space-x-2 bg-[#FFD21F] hover:bg-[#f6c612] text-[#0143B0] font-bold px-6 sm:px-7 min-h-[44px] sm:min-h-[48px] rounded-xl shadow-xl transition-all text-sm sm:text-base w-full sm:w-auto"
                 >
                   <span>Join Our Partner Network</span>
                   <ArrowRight className="w-5 h-5 shrink-0" />
